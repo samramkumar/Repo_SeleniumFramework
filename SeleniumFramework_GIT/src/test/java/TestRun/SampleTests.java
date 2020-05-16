@@ -28,7 +28,6 @@ public class SampleTests {
 	ExtentTest test;
 	ExtentReports report;
 	
-
 	@Test(dataProvider = "ToolData",threadPoolSize=7)
 	public void setUp(HashMap<String, String> data) throws IOException, InterruptedException
 	{
