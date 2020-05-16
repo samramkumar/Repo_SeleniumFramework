@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="37537" started-at="2020-05-11T18:48:56Z" finished-at="2020-05-11T18:49:33Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="37537" started-at="2020-05-11T18:48:56Z" finished-at="2020-05-11T18:49:33Z">
+      <class name="TestRun.SampleTests">
+        <test-method status="PASS" signature="setUp(java.util.HashMap)[pri:0, instance:TestRun.SampleTests@be2bc2]" name="setUp" duration-ms="35346" started-at="2020-05-12T00:18:58Z" data-provider="ToolData" finished-at="2020-05-12T00:19:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ToRun=Yes, Name=Ramkumar}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- TestRun.SampleTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
