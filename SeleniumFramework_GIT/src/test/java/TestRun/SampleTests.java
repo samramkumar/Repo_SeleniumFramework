@@ -38,7 +38,7 @@ public class SampleTests {
 		parser = new RepositoryParser("ObjectRepo.properties");
 		if(data.get("ToRun").equalsIgnoreCase("Yes"))
 		{
-		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\ChromeDriverNew\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
 		createAccount ca = new createAccount(parser,driver, data, test);
