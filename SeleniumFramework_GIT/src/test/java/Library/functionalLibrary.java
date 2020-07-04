@@ -3,6 +3,7 @@ package Library;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -37,6 +38,43 @@ public class functionalLibrary {
 		Thread.sleep(1500);
 		driver.findElement(parser.getbjectLocator(identifierr)).sendKeys(passdata);
 		test.log(LogStatus.PASS, identifierr+" text field is passed with data " +passdata);
+	}
+	public void customClearText(String identifierr) throws InterruptedException{
+		Thread.sleep(1500);
+		driver.findElement(parser.getbjectLocator(identifierr)).clear();
+		test.log(LogStatus.PASS, identifierr+" text field is cleared");
+	}
+	
+	
+	public void switchTab(){
+		String parentWindowHandle = driver.getWindowHandle();
+		System.out.println("Parent window's handle -> " + parentWindowHandle);
+		 
+		Set<String> allWindowHandles = driver.getWindowHandles();
+		String lastWindowHandle = "";
+		for(String handle : allWindowHandles)
+		{
+		System.out.println("Switching to window - > " + handle);
+		driver.switchTo().window(handle); //Switch to the desired window first and then execute commands using driver
+		lastWindowHandle = handle;
+		}
+		driver.switchTo().window(lastWindowHandle); 
+	}
+	public void switchTabHome(){
+		String parentWindowHandle = driver.getWindowHandle();
+		System.out.println("Parent window's handle -> " + parentWindowHandle);
+		 
+		Set<String> allWindowHandles = driver.getWindowHandles();
+		String lastWindowHandle = "";
+		for(String handle : allWindowHandles)
+		{
+		System.out.println("Switching to window - > " + handle);
+		driver.switchTo().window(handle); //Switch to the desired window first and then execute commands using driver
+		lastWindowHandle = handle;
+		break;
+		}
+		driver.switchTo().window(lastWindowHandle); 
+		driver.navigate().refresh();
 	}
 	
 	public static String capture(WebDriver driver) throws IOException {

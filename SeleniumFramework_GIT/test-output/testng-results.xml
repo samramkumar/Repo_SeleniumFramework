@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="73794" started-at="2020-07-01T20:07:54Z" finished-at="2020-07-01T20:09:07Z">
+  <suite name="Default suite" duration-ms="120102" started-at="2020-07-04T17:34:00Z" finished-at="2020-07-04T17:36:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="73794" started-at="2020-07-01T20:07:54Z" finished-at="2020-07-01T20:09:07Z">
+    <test name="Default test" duration-ms="120102" started-at="2020-07-04T17:34:00Z" finished-at="2020-07-04T17:36:00Z">
       <class name="TestRun.SampleTests">
-        <test-method status="PASS" signature="setUp(java.util.HashMap)[pri:0, instance:TestRun.SampleTests@13b32d7]" name="setUp" duration-ms="72955" started-at="2020-07-02T01:37:54Z" data-provider="ToolData" finished-at="2020-07-02T01:39:07Z">
+        <test-method status="PASS" signature="setUp(java.util.HashMap)[pri:0, instance:TestRun.SampleTests@13b32d7]" name="setUp" duration-ms="119237" started-at="2020-07-04T23:04:01Z" data-provider="ToolData" finished-at="2020-07-04T23:06:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{ToRun=Yes, Name=Ramkumar}]]>
+                <![CDATA[{Laptop=apple macbook pro, ToRun=Yes, Mobile=iphone 11 pro max, Book=wings of fire}]]>
               </value>
             </param>
           </params>

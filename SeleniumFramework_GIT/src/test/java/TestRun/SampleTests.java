@@ -7,8 +7,12 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -18,6 +22,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import Pages.createAccount;
+import Pages.homePage;
 import Repository.RepositoryParser;
 
 
@@ -29,9 +34,8 @@ public class SampleTests {
 	ExtentReports report;
 	
 	@Test(dataProvider = "ToolData",threadPoolSize=7)
-	public void setUp(HashMap<String, String> data) throws IOException, InterruptedException
+	public void driversetUp(HashMap<String, String> data) throws IOException, InterruptedException
 	{
-		//report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
 		String fileSuffix = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
 		report = new ExtentReports("D:\\RestWorkspace\\SeleniumFramework\\src\\test\\java\\Reports\\ExtentReportResults"+fileSuffix+".html");
 		test = report.startTest("ExtentDemo");
@@ -40,10 +44,13 @@ public class SampleTests {
 		{
 		System.setProperty("webdriver.chrome.driver", "E:\\ChromeDriverNew\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("http://automationpractice.com/index.php");
-		createAccount ca = new createAccount(parser,driver, data, test);
-		ca.giveAddress();
-		test.log(LogStatus.PASS, "Navigated to the specified URL");
+		driver.get("http://amazon.in");
+		homePage hp = new homePage(parser,driver, data, test);
+		hp.purchaseMobile(data.get("Mobile"));
+		hp.purchaseBook(data.get("Book"));
+		hp.purchaseLaptop(data.get("Laptop"));
+		
+		test.log(LogStatus.PASS, "Products has been added to cart successfully");
 		Thread.sleep(1500);
 		}
 		report.endTest(test);
@@ -63,7 +70,6 @@ public class SampleTests {
 			dataArray.add(new Object[] { data });
 			}
 		return dataArray.iterator();
-		
 	}
 
 }
