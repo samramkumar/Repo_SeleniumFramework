@@ -5,7 +5,7 @@
     <classes>
       <class name="TestRun.SampleTests">
         <methods>
-          <include name="setUp" invocation-numbers="0"/>
+          <include name="setUp" invocation-numbers="1 2 0"/>
         </methods>
       </class> <!-- TestRun.SampleTests -->
     </classes>

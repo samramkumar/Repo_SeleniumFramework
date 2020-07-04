@@ -37,7 +37,8 @@ public class SampleTests {
 	public void driversetUp(HashMap<String, String> data) throws IOException, InterruptedException
 	{
 		String fileSuffix = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
-		report = new ExtentReports("D:\\RestWorkspace\\SeleniumFramework\\src\\test\\java\\Reports\\ExtentReportResults"+fileSuffix+".html");
+		//report = new ExtentReports("D:\\RestWorkspace\\SeleniumFramework\\src\\test\\java\\Reports\\ExtentReportResults"+fileSuffix+".html");
+		report = new ExtentReports("C:\\Users\\Ramkumar\\git\\Repo_SeleniumFramework\\SeleniumFramework_GIT\\src\\test\\java\\Reports\\Amazonpurchaseresults.html");
 		test = report.startTest("ExtentDemo");
 		parser = new RepositoryParser("ObjectRepo.properties");
 		if(data.get("ToRun").equalsIgnoreCase("Yes"))
