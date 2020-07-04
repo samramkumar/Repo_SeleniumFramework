@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="120102" started-at="2020-07-04T17:34:00Z" finished-at="2020-07-04T17:36:00Z">
+  <suite name="Default suite" duration-ms="173408" started-at="2020-07-04T18:50:05Z" finished-at="2020-07-04T18:52:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="120102" started-at="2020-07-04T17:34:00Z" finished-at="2020-07-04T17:36:00Z">
+    <test name="Default test" duration-ms="173408" started-at="2020-07-04T18:50:05Z" finished-at="2020-07-04T18:52:59Z">
       <class name="TestRun.SampleTests">
-        <test-method status="PASS" signature="setUp(java.util.HashMap)[pri:0, instance:TestRun.SampleTests@13b32d7]" name="setUp" duration-ms="119237" started-at="2020-07-04T23:04:01Z" data-provider="ToolData" finished-at="2020-07-04T23:06:00Z">
+        <test-method status="PASS" signature="driversetUp(java.util.HashMap)[pri:0, instance:TestRun.SampleTests@13b32d7]" name="driversetUp" duration-ms="172483" started-at="2020-07-05T00:20:06Z" data-provider="ToolData" finished-at="2020-07-05T00:22:59Z">
           <params>
             <param index="0">
               <value>
@@ -17,7 +17,7 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
+        </test-method> <!-- driversetUp -->
       </class> <!-- TestRun.SampleTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
